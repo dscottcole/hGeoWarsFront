@@ -1,3 +1,5 @@
+const herokuURL = "https://geowarsretro2.herokuapp.com"
+
 const scoreDiv = document.querySelector("div.scoreboard")
 const scoreOl = document.querySelector('#scoreboard')
 
@@ -16,7 +18,8 @@ const submitNewScore = (score, time, acc) => {
         }
     }
 
-    fetch ('http://localhost:3000/scores', {
+    // fetch ('http://localhost:3000/scores', {
+    fetch(`${herokuURL}/scores`, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -34,7 +37,8 @@ const submitNewScore = (score, time, acc) => {
 let tableHeaders = ["Global Ranking", "Username", "Score", "Time Alive [seconds]", "Accuracy [%]"]
 
 const getScores = () => {
-    fetch('http://localhost:3000/scores')
+    // fetch('http://localhost:3000/scores')
+    fetch(`${herokuURL}/scores`)
     .then(res => res.json())
     .then(scores => {
         createScoreboardTable()
@@ -113,7 +117,8 @@ const refreshScoreboard = () => {
 }
 
 const getTenScores = () => {
-    fetch('http://localhost:3000/scores')
+    // fetch('http://localhost:3000/scores')
+    fetch(`${herokuURL}/scores`)
     .then(res => res.json())
     .then(scores => {    
         createScoreboardTable()
@@ -126,7 +131,8 @@ const getTenScores = () => {
 }
 
 const getUserScores = () => {
-    fetch('http://localhost:3000/scores')
+    // fetch('http://localhost:3000/scores')
+    fetch(`${herokuURL}/scores`)
     .then(res => res.json())
     .then(scores => {
         createScoreboardTable()    

@@ -1,3 +1,5 @@
+const herokuURL = "https://geowarsretro2.herokuapp.com"
+
 const loginDiv = document.querySelector('div.login')
 const loginForm = document.querySelector('.login-form')
 const registrationDiv = document.querySelector('div.registration')
@@ -34,7 +36,8 @@ const submitLoginCredentials = (user, pw) => {
         }
     }
 
-    fetch ('http://localhost:3000/login', {
+    // fetch ('http://localhost:3000/login', {
+    fetch(`${herokuURL}/login`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -235,7 +238,8 @@ const submitRegistrationCredentials = (user, pw, pc) => {
         }
     }
 
-    fetch ('http://localhost:3000/users', {
+    // fetch ('http://localhost:3000/users', {
+    fetch(`${herokuURL}/users`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
