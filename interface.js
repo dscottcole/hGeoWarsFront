@@ -37,7 +37,7 @@ const submitLoginCredentials = (user, pw) => {
     }
 
     // fetch ('http://localhost:3000/login', {
-    fetch(`${herokuURL}/login`, {
+    fetch('https://geowarsretro2.herokuapp.com/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -239,7 +239,7 @@ const submitRegistrationCredentials = (user, pw, pc) => {
     }
 
     // fetch ('http://localhost:3000/users', {
-    fetch(`${herokuURL}/users`, {
+    fetch('https://geowarsretro2.herokuapp.com/users', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
