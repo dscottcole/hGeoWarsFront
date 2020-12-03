@@ -67,7 +67,7 @@ const deniedLogin = (object) => {
     const deniedH = document.createElement('h2')
     deniedH.innerText = object.message
     let gandalf = document.createElement('img')
-    gandalf.src = '../Images/YouShallNotPass.gif'
+    gandalf.src = './Images/YouShallNotPass.gif'
     deniedDiv.append(deniedH, gandalf)
 }
 
@@ -264,7 +264,7 @@ const deniedRegistration = (object) => {
         deniedDiv.append(deniedH)
     })
     let gandalf = document.createElement('img')
-    gandalf.src = '../Images/YouShallNotPass.gif'
+    gandalf.src = './Images/YouShallNotPass.gif'
     deniedDiv.append(gandalf)
 }
 
@@ -298,7 +298,7 @@ const cornerLogoDiv = document.querySelector('.corner-logo')
 const appendCornerLogo = () => {
 
     const cornerLogo = document.createElement('img')
-    cornerLogo.src='../Images/Logo.jpg'
+    cornerLogo.src='./Images/Logo.jpg'
     cornerLogo.className = "cornerlogo"
     cornerLogo.style.height = '50px'
     cornerLogo.style.width = '60px'
@@ -308,7 +308,7 @@ const appendCornerLogo = () => {
 
 const appendMainLogo = () => {
     const titleLogo = document.createElement('img')
-    titleLogo.src='../Images/Logo_Title.jpg'
+    titleLogo.src='./Images/Logo_Title.jpg'
     titleLogo.className = "mainlogo"
     titleLogo.style.height = '200px'
     titleLogo.style.width = '335px'
